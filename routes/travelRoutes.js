@@ -4,6 +4,6 @@ import {getAllTravels, createTravels} from '../src/controllers/travelsController
 const router = express.Router();
 
 router.get('/travels', getAllTravels);
-router.post('/travels', getAllTravels);
+router.post('/travels', createTravels);
 
 export default router;

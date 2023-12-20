@@ -15,7 +15,7 @@ const createTravels = async(req, res) => {
     try {
         const {travel} = req.body;
         const newProduct = await createTravel(travel);
-        res.status(201).json({ travel: travel });
+        res.status(201).json({ travel: newProduct });
     }
     catch (error) {
         res.status(500).json({ error: "Error al procesar la solicitud" });
