@@ -1,5 +1,8 @@
-CREATE TABLE viajes (
+
+CREATE TABLE posts (
     id SERIAL PRIMARY KEY, 
-    destino VARCHAR(50) NOT NULL, 
-    presupuesto INT NOT NULL
+    titulo VARCHAR(25) NOT NULL, 
+    img VARCHAR(1000), 
+    descripcion VARCHAR(255), 
+    likes INT
 );

@@ -1,7 +1,7 @@
 import pool from "../../db/conectionDb.js";
 
 const getTravels = async () => {
-    const SQLquery = { text: "SELECT * FROM viajes" };
+    const SQLquery = { text: "SELECT * FROM posts" };
     try {
         const response = await pool.query(SQLquery);
         return response.rows;
@@ -11,10 +11,10 @@ const getTravels = async () => {
     }
 };
 
-const createTravel = async ({ destino, presupuesto }) => {
+const createTravel = async ({ titulo, img, descripcion, likes }) => {
     const SQLquery = {
-        text: "INSERT INTO viajes (destino, presupuesto) VALUES ($1, $2) RETURNING *",
-        values: [destino, presupuesto],
+        text: "INSERT INTO posts (titulo, img, descripcion, likes) VALUES ($1, $2, $3, $4) RETURNING *",
+        values: [titulo, img, descripcion, likes],
     };
     try {
         const response = await pool.query(SQLquery);
