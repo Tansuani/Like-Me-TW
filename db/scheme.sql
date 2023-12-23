@@ -5,4 +5,4 @@ CREATE TABLE posts (
     img VARCHAR(1000), 
     descripcion VARCHAR(255), 
     likes INT
-);
+); 

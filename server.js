@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { logger } from "logger-express";
-import travelsRouter from './routes/travelRoutes.js'
+import travelsRouter from './routes/likeRoutes.js'
 
 const app = express();
 const PORT = process.env.PORT || 3000;
